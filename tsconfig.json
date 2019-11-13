@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngxb-ui": [
+        "dist/ngxb-ui"
+      ],
+      "ngxb-ui/*": [
+        "dist/ngxb-ui/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

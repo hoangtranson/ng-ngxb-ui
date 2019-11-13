@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "ngxb-ui": {
+      "projectType": "library",
+      "root": "projects/ngxb-ui",
+      "sourceRoot": "projects/ngxb-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngxb-ui/tsconfig.lib.json",
+            "project": "projects/ngxb-ui/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngxb-ui/src/test.ts",
+            "tsConfig": "projects/ngxb-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/ngxb-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngxb-ui/tsconfig.lib.json",
+              "projects/ngxb-ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ng-ngbx-ui"
 }
