@@ -5,27 +5,8 @@ import {
   ChangeDetectionStrategy, 
   ElementRef
 } from '@angular/core';
-
-const COLOR_ATTRIBUTES = [
-  'white',
-  'light',
-  'dark',
-  'black',
-  'text',
-  'primary',
-  'link',
-  'info',
-  'success',
-  'warning',
-  'danger'
-];
-
-const SIZE_ATTRIBUTES = [
-  'small',
-  'normal',
-  'medium',
-  'large'
-];
+import { COLOR_ATTRIBUTES } from '../utilities/colors';
+import { SIZE_ATTRIBUTES } from '../utilities/sizes';
 
 
 @Component({
