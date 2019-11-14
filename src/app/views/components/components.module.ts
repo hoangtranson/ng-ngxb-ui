@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './button/button.component';
 import { ComponentsRoutingModule } from './components-routing.module';
 import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
-    ButtonComponent, 
     LandingComponent
   ],
   imports: [
@@ -14,8 +12,7 @@ import { LandingComponent } from './landing/landing.component';
     ComponentsRoutingModule
   ],
   exports: [
-    LandingComponent,
-    ButtonComponent
+    LandingComponent
   ]
 })
 export class ComponentsModule { }

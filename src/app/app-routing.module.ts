@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeModule } from 'src/app/views/welcome/welcome.module';
 import { ComponentsModule } from 'src/app/views/components/components.module';
+import { ElementsModule } from 'src/app/views/elements/elements.module';
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'components',
     loadChildren: () => ComponentsModule
+  },
+  {
+    path: 'elements',
+    loadChildren: () => ElementsModule
   }
 ];
 
