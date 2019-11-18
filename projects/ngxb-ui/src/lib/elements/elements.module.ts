@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 
+
 @NgModule({
   declarations: [ButtonComponent],
   imports: [
@@ -11,4 +12,4 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent
   ]
 })
-export class ButtonModule { }
+export class ElementsModule { }

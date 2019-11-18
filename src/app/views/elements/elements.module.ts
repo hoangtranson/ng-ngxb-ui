@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ElementsRoutingModule } from './elements-routing.module';
 import { LandingComponent } from './landing/landing.component';
 import { ButtonComponent } from './button/button.component';
-import { ButtonModule, LayoutModule } from 'projects/ngxb-ui/src/public-api';
+import { ElementsModule as Elements, LayoutModule } from 'projects/ngxb-ui/src/public-api';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ButtonModule, LayoutModule } from 'projects/ngxb-ui/src/public-api';
   imports: [
     CommonModule,
     ElementsRoutingModule,
-    ButtonModule,
+    Elements,
     LayoutModule
   ],
   exports: [
