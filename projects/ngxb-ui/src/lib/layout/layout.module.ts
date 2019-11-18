@@ -5,6 +5,10 @@ import { HorizonComponent, NavHorizonComponent } from './horizon/horizon.compone
 import { NgxbLeftDirective } from './horizon/ngxb-left.directive';
 import { NgxbRightDirective } from './horizon/ngxb-right.directive';
 import { NgxbItemDirective } from './horizon/ngxb-item.directive';
+import { MediaComponent } from './media/media.component';
+import { LeftDirective } from './media/left.directive';
+import { ContentDirective } from './media/content.directive';
+import { RightDirective } from './media/right.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +17,11 @@ import { NgxbItemDirective } from './horizon/ngxb-item.directive';
     NavHorizonComponent, 
     NgxbLeftDirective, 
     NgxbRightDirective, 
-    NgxbItemDirective
+    NgxbItemDirective, 
+    MediaComponent, 
+    LeftDirective, 
+    ContentDirective, 
+    RightDirective
   ],
   imports: [
     CommonModule
@@ -23,7 +31,11 @@ import { NgxbItemDirective } from './horizon/ngxb-item.directive';
     NgxbLeftDirective,
     NgxbRightDirective,
     NavHorizonComponent,
-    NgxbItemDirective
+    NgxbItemDirective,
+    MediaComponent,
+    LeftDirective, 
+    ContentDirective, 
+    RightDirective
   ]
 })
 export class LayoutModule { }

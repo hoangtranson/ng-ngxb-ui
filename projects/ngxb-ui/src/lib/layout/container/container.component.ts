@@ -18,7 +18,7 @@ export class ContainerComponent{
     }
   }
 
-   _hasHostAttributes(...attributes: string[]) {
+  _hasHostAttributes(...attributes: string[]) {
     return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
   }
 

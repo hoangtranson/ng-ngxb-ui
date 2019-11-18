@@ -1,7 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[ngxb-right]'
+  selector: '[ngxb-horizon-right]'
 })
 export class NgxbRightDirective {
 

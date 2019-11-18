@@ -2,13 +2,13 @@
     <!-- Main container -->
     <nav ngxb-horizon>
         <!-- Left side -->
-        <div ngxb-left>
-            <div ngxb-item>
+        <div ngxb-horizon-left>
+            <div ngxb-horizon-item>
                 <p class="subtitle is-5">
                     <strong>123</strong> posts
                 </p>
             </div>
-            <div ngxb-item>
+            <div ngxb-horizon-item>
                 <div class="field has-addons">
                     <p class="control">
                         <input class="input" type="text" placeholder="Find a post">
@@ -23,49 +23,118 @@
         </div>
 
         <!-- Right side -->
-        <div ngxb-right>
-            <p ngxb-item>
+        <div ngxb-horizon-right>
+            <p ngxb-horizon-item>
                 <strong>All</strong>
             </p>
-            <p ngxb-item>
+            <p ngxb-horizon-item>
                 <a>Published</a>
             </p>
-            <p ngxb-item>
+            <p ngxb-horizon-item>
                 <a>Drafts</a>
             </p>
-            <p ngxb-item>
+            <p ngxb-horizon-item>
                 <a>Deleted</a>
             </p>
-            <p ngxb-item>
+            <p ngxb-horizon-item>
                 <a class="button is-success">New</a>
             </p>
         </div>
     </nav>
 
     <nav ngxb-horizon horizon-on-mobile>
-        <div ngxb-item center>
+        <div ngxb-horizon-item center>
             <div>
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
+                <p class="heading">Tweets</p>
+                <p class="title">3,456</p>
             </div>
         </div>
-        <div ngxb-item center>
+        <div ngxb-horizon-item center>
             <div>
-            <p class="heading">Following</p>
-            <p class="title">123</p>
+                <p class="heading">Following</p>
+                <p class="title">123</p>
             </div>
         </div>
-        <div ngxb-item center>
+        <div ngxb-horizon-item center>
             <div>
-            <p class="heading">Followers</p>
-            <p class="title">456K</p>
+                <p class="heading">Followers</p>
+                <p class="title">456K</p>
             </div>
         </div>
-        <div ngxb-item center>
+        <div ngxb-horizon-item center>
             <div>
-            <p class="heading">Likes</p>
-            <p class="title">789</p>
+                <p class="heading">Likes</p>
+                <p class="title">789</p>
             </div>
         </div>
     </nav>
+
+    <div ngxb-media>
+        <figure ngxb-media-left>
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div ngxb-media-content>
+            <div class="content">
+                <p>
+                    <strong>John Smith</strong>
+                    <small>@johnsmith</small>
+                    <small>31m</small>
+                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor
+                    vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                </p>
+            </div>
+            <nav class="level is-mobile">
+                <div class="level-left">
+                    <a class="level-item">
+                        <span class="icon is-small">
+                            <i class="fas fa-reply"></i>
+                        </span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small">
+                            <i class="fas fa-retweet"></i>
+                        </span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div ngxb-media-right>
+            <button class="delete"></button>
+        </div>
+    </div>
+    <div ngxb-media>
+        <figure ngxb-media-left>
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div ngxb-media-content>
+            <div class="field">
+                <p class="control">
+                    <textarea class="textarea" placeholder="Add a comment..."></textarea>
+                </p>
+            </div>
+            <nav ngxb-horizon>
+                <div ngxb-horizon-left>
+                    <div ngxb-horizon-item>
+                        <button ngxb-button info>Submit</button>
+                    </div>
+                </div>
+                <div ngxb-horizon-right>
+                    <div ngxb-horizon-item>
+                        <label class="checkbox">
+                            <input type="checkbox"> Press enter to submit
+                        </label>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
 </div>

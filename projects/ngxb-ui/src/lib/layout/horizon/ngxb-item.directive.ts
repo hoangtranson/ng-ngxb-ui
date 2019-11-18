@@ -1,7 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[ngxb-item]'
+  selector: '[ngxb-horizon-item]'
 })
 export class NgxbItemDirective {
 
