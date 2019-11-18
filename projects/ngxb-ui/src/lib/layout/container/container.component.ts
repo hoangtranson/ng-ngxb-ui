@@ -1,11 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { SCREEN_ATTRIBUTES } from '../../shared/attributes';
 
-const ATTRIBUTES = [
-  'fluid',
-  'widescreen',
-  'fullhd'
-]
 @Component({
   selector: 'div[ngxb-container]',
   exportAs: 'ngxbContainer',
