@@ -9,9 +9,15 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "gulp && cd dist/ngxb-ui && npm pack && npm publish",
-    "install": "npm i dist/ngxb-ui/ngxb-ui-0.0.1.tgz"
+    "install": "npm i dist/ngxb-ui/ngxb-ui-0.0.1.tgz",
+    "commit": "npx git-cz"
   },
   "private": true,
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@angular/animations": "~8.2.13",
     "@angular/common": "~8.2.13",
