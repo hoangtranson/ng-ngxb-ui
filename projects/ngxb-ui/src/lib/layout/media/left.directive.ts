@@ -1,16 +1,13 @@
 import { Directive, ElementRef } from '@angular/core';
+import { ClassBaseComponent } from '../../shared/abstracts';
 
 @Directive({
   selector: '[ngxb-media-left]'
 })
-export class LeftDirective {
+export class LeftDirective extends ClassBaseComponent {
 
   constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('media-left');
+    super(elementRef, 'media-left');
   }
   
-  _getHostElement() {
-    return this.elementRef.nativeElement;
-  }
-
 }

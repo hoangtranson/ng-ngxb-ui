@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewsModule } from 'src/app/views/views.module';
+import { LayoutModule } from 'projects/ngxb-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ViewsModule } from 'src/app/views/views.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ViewsModule
+    ViewsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

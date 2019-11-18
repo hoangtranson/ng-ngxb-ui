@@ -1,15 +1,13 @@
 import { Directive, ElementRef } from '@angular/core';
+import { ClassBaseComponent } from '../../shared/abstracts';
 
 @Directive({
   selector: '[ngxb-horizon-left]'
 })
-export class NgxbLeftDirective {
+export class NgxbLeftDirective extends ClassBaseComponent {
 
   constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('level-left');
+    super(elementRef, 'level-left');
   }
-  
-  _getHostElement() {
-    return this.elementRef.nativeElement;
-  }
+
 }

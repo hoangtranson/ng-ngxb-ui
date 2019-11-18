@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { ClassBaseComponent } from '../../shared/abstracts';
 
 @Component({
   selector: 'div[ngxb-horizon]',
@@ -6,22 +7,15 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   templateUrl: './horizon.component.html',
   styleUrls: ['./horizon.component.scss']
 })
-export class HorizonComponent {
+export class HorizonComponent extends ClassBaseComponent {
 
-  constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('level');
+  constructor(public elementRef: ElementRef) {
+    super(elementRef, 'level');
     if (this._hasHostAttributes('horizon-on-mobile')) {
       (this._getHostElement() as HTMLElement).classList.add(`is-mobile`);
     }
   }
 
-  _hasHostAttributes(...attributes: string[]) {
-    return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
-  }
-
-  _getHostElement() {
-    return this.elementRef.nativeElement;
-  }
 }
 
 @Component({
@@ -30,20 +24,13 @@ export class HorizonComponent {
   templateUrl: './horizon.component.html',
   styleUrls: ['./horizon.component.scss']
 })
-export class NavHorizonComponent {
+export class NavHorizonComponent extends ClassBaseComponent {
 
-  constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('level');
+  constructor(public elementRef: ElementRef) {
+    super(elementRef, 'level');
     if (this._hasHostAttributes('horizon-on-mobile')) {
       (this._getHostElement() as HTMLElement).classList.add(`is-mobile`);
     }
   }
 
-  _hasHostAttributes(...attributes: string[]) {
-    return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
-  }
-
-  _getHostElement() {
-    return this.elementRef.nativeElement;
-  }
 }

@@ -1,23 +1,16 @@
 import { Directive, ElementRef } from '@angular/core';
+import { ClassBaseComponent } from '../../shared/abstracts';
 
 @Directive({
   selector: '[ngxb-horizon-item]'
 })
-export class NgxbItemDirective {
+export class NgxbItemDirective extends ClassBaseComponent {
 
-  constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('level-item');
+  constructor(public elementRef: ElementRef) {
+    super(elementRef, 'level-item');
     if (this._hasHostAttributes('center')) {
       (this._getHostElement() as HTMLElement).classList.add(`has-text-centered`);
     }
-  }
-
-  _hasHostAttributes(...attributes: string[]) {
-    return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
-  }
-
-  _getHostElement() {
-    return this.elementRef.nativeElement;
   }
 
 }

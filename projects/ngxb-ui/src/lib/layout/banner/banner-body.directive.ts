@@ -1,16 +1,13 @@
 import { Directive, ElementRef } from '@angular/core';
+import { ClassBaseComponent } from '../../shared/abstracts';
 
 @Directive({
   selector: '[ngxb-banner-body]'
 })
-export class BannerBodyDirective {
+export class BannerBodyDirective extends ClassBaseComponent {
 
   constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('hero-body');
-  }
-  
-  _getHostElement() {
-    return this.elementRef.nativeElement;
+    super(elementRef, 'hero-body');
   }
 
 }

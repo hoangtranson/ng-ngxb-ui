@@ -6,6 +6,7 @@ import {
   ElementRef
 } from '@angular/core';
 import { COLOR_ATTRIBUTES, SIZE_ATTRIBUTES } from '../../shared/attributes';
+import { ClassBaseComponent } from '../../shared/abstracts';
 
 
 @Component({
@@ -16,10 +17,10 @@ import { COLOR_ATTRIBUTES, SIZE_ATTRIBUTES } from '../../shared/attributes';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent {
+export class ButtonComponent extends ClassBaseComponent {
 
-  constructor(public elementRef: ElementRef) { 
-    (this._getHostElement() as HTMLElement).classList.add('button');
+  constructor(public elementRef: ElementRef) {
+    super(elementRef, 'button');
     for (const attr of COLOR_ATTRIBUTES) {
       if (this._hasHostAttributes(attr)) {
         (this._getHostElement() as HTMLElement).classList.add(`is-${attr}`);
@@ -32,13 +33,4 @@ export class ButtonComponent {
       }
     }
   }
-
-  _hasHostAttributes(...attributes: string[]) {
-    return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
-  }
-
-  _getHostElement() {
-    return this.elementRef.nativeElement;
-  }
-
 }
