@@ -5,8 +5,7 @@ import {
   ChangeDetectionStrategy, 
   ElementRef
 } from '@angular/core';
-import { COLOR_ATTRIBUTES } from '../utilities/colors';
-import { SIZE_ATTRIBUTES } from '../utilities/sizes';
+import { COLOR_ATTRIBUTES, SIZE_ATTRIBUTES } from '../../shared/attributes';
 
 
 @Component({

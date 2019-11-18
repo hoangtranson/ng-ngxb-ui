@@ -3,3 +3,4 @@
  */
 
 export * from './lib/button/button.module';
+export * from './lib/layout/layout.module';
