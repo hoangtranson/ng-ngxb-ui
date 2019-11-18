@@ -1,13 +1,18 @@
-export const COLOR_ATTRIBUTES = [
-    'white',
-    'light',
-    'dark',
-    'black',
-    'text',
+const BASE_COLORS = [
     'primary',
-    'link',
     'info',
     'success',
     'warning',
-    'danger'
+    'danger',
+    'light',
+    'dark'
+]
+export const COLOR_ATTRIBUTES = [
+    ...BASE_COLORS,
+    'white',
+    'black',
+    'text',
+    'link',
 ];
+
+export const BASIC_COLOR_ATTRIBUTES = [...BASE_COLORS];

@@ -9,6 +9,10 @@ import { MediaComponent } from './media/media.component';
 import { LeftDirective } from './media/left.directive';
 import { ContentDirective } from './media/content.directive';
 import { RightDirective } from './media/right.directive';
+import { BannerComponent } from './banner/banner.component';
+import { BannerBodyDirective } from './banner/banner-body.directive';
+import { BannerTopDirective } from './banner/banner-top.directive';
+import { BannerBottomDirective } from './banner/banner-bottom.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { RightDirective } from './media/right.directive';
     MediaComponent, 
     LeftDirective, 
     ContentDirective, 
-    RightDirective
+    RightDirective, 
+    BannerComponent, 
+    BannerBodyDirective, 
+    BannerTopDirective, 
+    BannerBottomDirective
   ],
   imports: [
     CommonModule
@@ -35,7 +43,11 @@ import { RightDirective } from './media/right.directive';
     MediaComponent,
     LeftDirective, 
     ContentDirective, 
-    RightDirective
+    RightDirective,
+    BannerComponent, 
+    BannerBodyDirective,
+    BannerTopDirective, 
+    BannerBottomDirective
   ]
 })
 export class LayoutModule { }

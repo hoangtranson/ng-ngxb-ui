@@ -4,3 +4,9 @@ export const SIZE_ATTRIBUTES = [
     'medium',
     'large'
 ];
+
+export const BANNER_SIZE_ATTRIBUTES = [
+    'medium',
+    'large',
+    'fullheight'
+];
