@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, Input, ViewChild } from '@angular/core';
 import { ClassBaseComponent } from '../../shared/abstracts';
 
 const COLOR_ATTRIBUTES = [
@@ -12,6 +12,12 @@ const SIZE_ATTRIBUTES = [
   'small',
   'medium',
   'large'
+];
+
+const ROTATE_ATTRIBUTES = [
+  'rotate-90',
+  'rotate-180',
+  'rotate-270'
 ]
 
 @Component({
@@ -23,6 +29,8 @@ const SIZE_ATTRIBUTES = [
 export class IconComponent extends ClassBaseComponent implements OnInit {
 
   @Input() name;
+  @ViewChild('svgIcon', {static: true}) svgIcon: ElementRef;
+
   iconClass: string;
 
   constructor(public elementRef: ElementRef) { 
@@ -42,5 +50,14 @@ export class IconComponent extends ClassBaseComponent implements OnInit {
 
   ngOnInit() {
     this.iconClass = `fas fa-${this.name}`;
+    if (this._hasHostAttributes('animate')) {
+      this.iconClass += ' fa-pulse';
+    }
+
+    for (const attr of ROTATE_ATTRIBUTES) {
+      if (this._hasHostAttributes(attr)) {
+        (this.svgIcon.nativeElement as HTMLElement).setAttribute('data-fa-transform', attr);
+      }
+    }
   }
 }
