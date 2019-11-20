@@ -4,6 +4,7 @@ import { ButtonComponent } from './button/button.component';
 import { IconComponent } from './icon/icon.component';
 import { ImageComponent } from './image/image.component';
 import { AlertComponent } from './alert/alert.component';
+import { TagsComponent } from './tags/tags.component';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AlertComponent } from './alert/alert.component';
     ButtonComponent, 
     IconComponent, 
     ImageComponent, 
-    AlertComponent
+    AlertComponent, 
+    TagsComponent
   ],
   imports: [
     CommonModule
@@ -20,7 +22,8 @@ import { AlertComponent } from './alert/alert.component';
     ButtonComponent,
     IconComponent,
     ImageComponent,
-    AlertComponent
+    AlertComponent,
+    TagsComponent
   ]
 })
 export class ElementsModule { }
