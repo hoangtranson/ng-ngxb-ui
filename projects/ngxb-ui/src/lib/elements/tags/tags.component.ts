@@ -34,4 +34,7 @@ export class TagsComponent extends ClassBaseComponent implements OnInit {
     this.tagClass = `tag ${color}`;
   }
 
+  onClick(item) {
+    this.selected.emit(item);
+  }
 }

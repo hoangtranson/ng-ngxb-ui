@@ -1,1 +1,1 @@
-<span [ngClass]="tagClass" *ngFor="let item of source">{{item}}</span>
+<span [ngClass]="tagClass" *ngFor="let item of source" (click)="onClick(item)">{{item}}</span>
