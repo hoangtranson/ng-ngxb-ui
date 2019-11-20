@@ -5,6 +5,8 @@ import { IconComponent } from './icon/icon.component';
 import { ImageComponent } from './image/image.component';
 import { AlertComponent } from './alert/alert.component';
 import { TagsComponent } from './tags/tags.component';
+import { TitleDirective } from './title/title.directive';
+import { SubTitleDirective } from './title/sub-title.directive';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { TagsComponent } from './tags/tags.component';
     IconComponent, 
     ImageComponent, 
     AlertComponent, 
-    TagsComponent
+    TagsComponent, 
+    TitleDirective,
+    SubTitleDirective
   ],
   imports: [
     CommonModule
@@ -23,7 +27,9 @@ import { TagsComponent } from './tags/tags.component';
     IconComponent,
     ImageComponent,
     AlertComponent,
-    TagsComponent
+    TagsComponent,
+    TitleDirective,
+    SubTitleDirective
   ]
 })
 export class ElementsModule { }
