@@ -13,6 +13,7 @@ import { BannerComponent } from './banner/banner.component';
 import { BannerBodyDirective } from './banner/banner-body.directive';
 import { BannerTopDirective } from './banner/banner-top.directive';
 import { BannerBottomDirective } from './banner/banner-bottom.directive';
+import { ColumnsModule } from './columns/columns.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BannerBottomDirective } from './banner/banner-bottom.directive';
     BannerBottomDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ColumnsModule
   ],
   exports: [
     ContainerComponent,
@@ -47,7 +49,8 @@ import { BannerBottomDirective } from './banner/banner-bottom.directive';
     BannerComponent, 
     BannerBodyDirective,
     BannerTopDirective, 
-    BannerBottomDirective
+    BannerBottomDirective,
+    ColumnsModule
   ]
 })
 export class LayoutModule { }
