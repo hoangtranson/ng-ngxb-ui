@@ -1,0 +1,4 @@
+<span [ngClass]="tagClass" *ngFor="let item of source" (click)="onClick(item)">
+    {{item}}
+    <button *ngIf="closable" [ngClass]="deleteClass" (click)="onCloseTag(item)"></button>
+</span>
