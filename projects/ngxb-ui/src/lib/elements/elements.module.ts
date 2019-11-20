@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { IconComponent } from './icon/icon.component';
 import { ImageComponent } from './image/image.component';
+import { AlertComponent } from './alert/alert.component';
 
 
 @NgModule({
   declarations: [
     ButtonComponent, 
     IconComponent, 
-    ImageComponent
+    ImageComponent, 
+    AlertComponent
   ],
   imports: [
     CommonModule
@@ -17,7 +19,8 @@ import { ImageComponent } from './image/image.component';
   exports: [
     ButtonComponent,
     IconComponent,
-    ImageComponent
+    ImageComponent,
+    AlertComponent
   ]
 })
 export class ElementsModule { }
