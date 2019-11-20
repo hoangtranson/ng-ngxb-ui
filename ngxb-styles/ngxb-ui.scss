@@ -1,2 +1,9 @@
 @charset "utf-8";
-@import "../node_modules/bulma/bulma.sass"
+// @import "../node_modules/bulma/bulma.sass";
+@import "./utilities/_all.sass";
+@import "./base/_all.sass";
+@import "./elements/_all.sass";
+@import "./form/_all.sass";
+@import "./components/_all.sass";
+@import "./grid/_all.sass";
+@import "./layout/_all.sass";
